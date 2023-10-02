@@ -35,7 +35,7 @@ public:
         sum = accumulate(matchsticks.begin(),matchsticks.end(),0);
         if(sum%4)return false;
         sum/=4;
-        sort(matchsticks.rbegin(),matchsticks.rend());
+        sort(matchsticks.begin(),matchsticks.end());
         // memset(dp,-1,sizeof dp);
         return dfs(n-1,buckets,matchsticks);
     }
