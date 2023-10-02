@@ -31,8 +31,8 @@ public:
                 }
             }
         }
-        cout<<cntA<<" "<<cntB<<endl;
-        cout<<cnt<<endl;
+        // cout<<cntA<<" "<<cntB<<endl;
+        // cout<<cnt<<endl;
         if(cnt>=0)
         {
             cntA += max(0,cnt-2);
