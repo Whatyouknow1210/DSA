@@ -24,11 +24,15 @@ public:
     int floor(Node* root, int x) {
         if(root==nullptr)return -1;
         int x1 = -1;
-        if(root->data<=x)
+        if(root->data==x)
         {
-            x1 = max(x1,root->data);
+            return root->data;
         }
-        x1 = max(x1,max(floor(root->right,x),floor(root->left,x)));
+        if(root->data>x)
+        {
+            x1 = max(x1,floor(root->left,x));
+        }
+        else x1 = root->data,x1 = max(x1,floor(root->right,x));
         return x1;
     }
 };
